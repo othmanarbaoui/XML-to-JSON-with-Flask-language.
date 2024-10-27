@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Textareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+    <form action="/transfer" method="post">
+        <div >
+            <textarea name="textarea1" placeholder="Texte XML">{{ xmlText }}</textarea>
+            <button type="submit">Transférer</button>
+            <textarea name="textarea2" placeholder="Texte Json" class="{{ 'erreur' if erreur else '' }}">{{ jsonText }}</textarea>
+        </div>
+    </form>
+</body>
+</html>
+
